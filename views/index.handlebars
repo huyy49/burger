@@ -1,6 +1,6 @@
 <h1>Eat-Da-Burger!</h1>
 
-<h2>Burgers that are not devoured!</h2>
+<h2>Waiting to be devoured</h2>
 
 <ul>
   {{#each burgers}}
@@ -8,7 +8,7 @@
       <li>
         {{burger_name}}
         <button class="change-devour" data-id="{{id}}" data-newdevour="true">
-          {{#unless devour}}Wait to be devoured!{{/unless}}
+          {{#unless devour}}Devour it!{{/unless}}
         </button>
       </li>
     {{/unless}}
@@ -37,8 +37,8 @@
 
   <div class="form-group">
     <label for="devoured">Devoured?</label><br>
-    <input type="radio" name="devoured" value="1" checked> Devoured!<br>
-    <input type="radio" name="devoured" value="0"> Not Devoured!
+    <input type="radio" name="devoured" value="0" checked> Not Devoured!<br>
+    <input type="radio" name="devoured" value="1"> Devoured!
   </div>
 
   <button type="submit">Add Burger</button>
